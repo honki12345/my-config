@@ -14,17 +14,17 @@ terminator() {
 }
 
 firefox() {
-    nohup ~/goinfre/nix-portable nix run --impure nixpkgs#firefox "$@" > /dev/null 2>&1 &
+    nohup /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=firefox org.mozilla.firefox "$@" > /dev/null 2>&1 &
     disown
 }
 
 discord() {
-    nohup ~/goinfre/nix-portable nix run --impure nixpkgs#discord "$@" > /dev/null 2>&1 &
+    nohup /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.discordapp.Discord com.discordapp.Discord "$@" > /dev/null 2>&1 &
     disown
 }
 
 slack() {
-    nohup ~/goinfre/nix-portable nix run --impure nixpkgs#slack "$@" > /dev/null 2>&1 &
+    nohup /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.slack.Slack --file-forwarding com.slack.Slack "$@" > /dev/null 2>&1 &
     disown
 }
 
