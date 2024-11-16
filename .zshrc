@@ -26,8 +26,7 @@ alias cfdf='cd /home/hookim/dev/inner-circle/fdf'
 alias cfzf='cd $(find ~ -type d | fzf)'
 alias zshrc='vi ~/.zshrc'
 alias paste='xclip -selection clipboard'
-alias start='~/workspace.sh'
-
+alias start='~/nix-script.sh'
 
 clion() {
         nohup ~/goinfre/nix-portable nix run --impure nixpkgs#jetbrains.clion "$@" > /dev/null 2>&1 &
@@ -66,6 +65,6 @@ wmctrl() {
 zsh-git-prompt() {
         ~/goinfre/nix-portable nix run nixpkgs#zsh-git-prompt -- "$@"
 }
-maestral() {
-	 ~/goinfre/nix-portable nix run --impure nixpkgs#maestral -- "$@"
+dropbox() {
+        ~/goinfre/nix-portable nix run nixpkgs#maestral -- "$@"
 }
