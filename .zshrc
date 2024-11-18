@@ -2,14 +2,14 @@
 
 # prompt
 autoload -U colors && colors
-source /home/hookim/dev/install/git-prompt.zsh
+source /home/hookim/dev/dropbox/install/git-prompt.zsh
 #NEWLINE=$'\n %# '
 #PS1="%{$fg[red]%}%n@%m %~ %{$reset_color%}${NEWLINE}"
 
 
 # set environment
 export MAIL=hookim@student.42gyeongsan.kr
-export PATH="$HOME/dev/install:$HOME/.local/bin:$PATH"
+export PATH="$HOME/dev/dropbox/install:$HOME/.local/bin:$PATH"
 export NP_LOCATION=~/goinfre
 export NP_RUNTIME=bwrap
 export NIXPKGS_ALLOW_UNFREE=1
