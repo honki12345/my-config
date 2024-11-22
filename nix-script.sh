@@ -75,7 +75,7 @@ discord() {
 }
 
 slack() {
-    nohup /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=slack --file-forwarding com.slack.Slack @@u %U @@ "$@" > /dev/null 2>&1 &
+    nohup /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.slack.Slack --file-forwarding com.slack.Slack @@u %U @@ "$@" > /dev/null 2>&1 &
     disown
 }
 
