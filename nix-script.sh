@@ -29,7 +29,7 @@ fi
 
 export NIXPKGS_ALLOW_UNFREE=1
 
-$nix_portable nix build --impure --no-link nixpkgs#jetbrains.clion
+#$nix_portable nix build --impure --no-link nixpkgs#jetbrains.clion
 $nix_portable nix build --impure --no-link nixpkgs#maestral
 $nix_portable nix build --impure --no-link $TLDR
 $nix_portable nix build --impure --no-link $FZF_PKGS

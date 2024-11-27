@@ -9,7 +9,7 @@ source /home/hookim/dev/dropbox/install/git-prompt.zsh
 
 # set environment
 export MAIL=hookim@student.42gyeongsan.kr
-export PATH="$HOME/dev/dropbox/install:$HOME/.local/bin:$PATH"
+export PATH="$HOME/dev/dropbox/install/lua-5.4.7/src:$HOME/dev/dropbox/install:$HOME/.local/bin:$PATH"
 export NP_LOCATION=~/goinfre
 export NP_RUNTIME=bwrap
 export NIXPKGS_ALLOW_UNFREE=1
@@ -27,9 +27,14 @@ alias cfzf='cd $(find ~ -type d | fzf)'
 alias zshrc='vi ~/.zshrc'
 alias paste='xclip -selection clipboard'
 alias start='~/nix-script.sh'
+alias nvim='/home/hookim/dev/dropbox/nvim-linux64/bin/nvim'
 
 clion() {
         nohup ~/goinfre/nix-portable nix run --impure nixpkgs#jetbrains.clion "$@" > /dev/null 2>&1 &
+		disown
+}
+pycharm() {
+        nohup ~/goinfre/nix-portable nix run --impure nixpkgs#jetbrains.pycharm-professional "$@" > /dev/null 2>&1 &
 		disown
 }
 tldr() {
@@ -41,9 +46,9 @@ broot() {
 fzf() {
         ~/goinfre/nix-portable nix run nixpkgs#fzf -- "$@"
 }
-fd() {
-        ~/goinfre/nix-portable nix run nixpkgs#fd -- "$@"
-}
+#fd() {
+#        ~/goinfre/nix-portable nix run nixpkgs#fd -- "$@"
+#}
 duf() {
         ~/goinfre/nix-portable nix run nixpkgs#duf -- "$@"
 }
@@ -62,9 +67,13 @@ rip() {
 wmctrl() {
         ~/goinfre/nix-portable nix run nixpkgs#wmctrl -- "$@"
 }
+term() {
+        ~/goinfre/nix-portable nix run nixpkgs#alacritty -- "$@"
+}
 zsh-git-prompt() {
         ~/goinfre/nix-portable nix run nixpkgs#zsh-git-prompt -- "$@"
 }
 dropbox() {
         ~/goinfre/nix-portable nix run nixpkgs#maestral -- "$@"
 }
+. "/home/hookim/.deno/env"
