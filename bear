@@ -1,0 +1,4 @@
+NIX_PORTABLE="$HOME/goinfre/nix-portable"
+
+$NIX_PORTABLE nix-shell -p bear --run "bear -- make"
+make fclean
